@@ -1,4 +1,4 @@
-# cse210-06
+# Zilch - Dice Game
 
 
 Individual Assignments:
