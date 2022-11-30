@@ -1,26 +1,30 @@
 import random as r
+import choice from input_handling
 
 die_value = 0
 
 # Player values
 rolls = []
 kept_rolls = []
-new_points = 0
 
 # Bot values
 bot_rolls = []
 bot_kept_rolls = []
-bot_new_points = 0
 
 class D:
-    def roll(rolls,kept_rolls):
-        while kept_rolls < 6:
-            rolls.append(r.randint(1,6))
-        for item in rolls:
-            print(item, end=" - ")
+    def roll(rolls,kept_rolls,choice):
+        if kept_rolls.count() = 6:
+            print('You have no more dice to roll.')
+            choice = 'done'
+        else:
+            while rolls < (6 - kept_rolls):
+                rolls.append(r.randint(1,6))
+            print(*rolls, sep = ' ')
     
     def bot_roll(bot_rolls,bot_kept_rolls):
-        while bot_kept_rolls < 6:
-            bot_rolls.append(r.randint(1,6))
-        for item in bot_rolls:
-            print(item, end=" - ")
+        if bot_kept_rolls.count() = 6:
+            print('no more dice for bot')
+        else:
+            while bot_rolls < (6 - bot_kept_rolls):
+                bot_rolls.append(r.randint(1,6))
+            print(*bot_rolls, sep = ' ')
