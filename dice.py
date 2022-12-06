@@ -1,5 +1,5 @@
 import random as r
-import choice from input_handling
+from input_handling import Choice
 
 die_value = 0
 
@@ -13,7 +13,7 @@ bot_kept_rolls = []
 
 class D:
     def roll(rolls,kept_rolls,choice):
-        if kept_rolls.count() = 6:
+        if kept_rolls.count() == 6:
             print('You have no more dice to roll.')
             choice = 'done'
         else:
@@ -22,7 +22,7 @@ class D:
             print(*rolls, sep = ' ')
     
     def bot_roll(bot_rolls,bot_kept_rolls):
-        if bot_kept_rolls.count() = 6:
+        if bot_kept_rolls.count() == 6:
             print('no more dice for bot')
         else:
             while bot_rolls < (6 - bot_kept_rolls):
