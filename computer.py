@@ -15,6 +15,9 @@ class Computer:
     def return_message(self, num):
         return self._messages[num-1]
 
+    def return_total_points(self):
+        return self._total_points
+
     def modify_total_points(self, value):
         self._total_points =+ value
 
@@ -42,20 +45,20 @@ class Computer:
         if risk <= .4:
             if self._round_points >= 1000:
                 return "stop"
-            if self._round_points < 1000:
+            elif self._round_points < 1000:
                 return "roll"
-        if risk > .4 and risk <= .6:
+        elif risk > .4 and risk <= .6:
             if self._round_points >= 1250:
                 return "stop"
-            if self._round_points < 1250:
+            elif self._round_points < 1250:
                 return "roll"
-        if risk > .6 and risk <= .8:
+        elif risk > .6 and risk <= .8:
             if self._round_points >= 1750:
                 return "stop"
-            if self._round_points < 1750:
+            elif self._round_points < 1750:
                 return "roll"
         else:
             if self._round_points >= 2500:
                 return "stop"
-            if self._round_points < 2500:
+            elif self._round_points < 2500:
                 return "roll"
