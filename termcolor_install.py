@@ -11,5 +11,5 @@ if missing:
     python = sys.executable
     subprocess.check_call(
         [python, '-m', 'pip', 'install', *missing], stdout=subprocess.DEVNULL)
-# ^ This entire code essentially checks for pygame and if the user does not have it installed, it will install it before moving forward.
+# ^ This entire code essentially checks for termcolor and if the user does not have it installed, it will install it before moving forward.
 # ========================================================================================================================================
