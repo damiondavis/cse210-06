@@ -21,7 +21,7 @@ class D:
         else:
             while rolls < (6 - kept_rolls.count()):
                 rolls.append(r.randint(1,6))
-            print(colored(*die_numbers[0:(kept_rolls.count() -6)], 'red'))
+            print(colored(*die_numbers[0:(kept_rolls.count() -6)], 'red'), sep = ' ')
             print(colored(*rolls, 'green'), sep = ' ')
     
     def bot_roll(bot_rolls,bot_kept_rolls):
