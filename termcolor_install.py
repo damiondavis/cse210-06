@@ -1,3 +1,15 @@
-import os
+import sys
+import subprocess
+import pkg_resources
 
-os.system("python3 -m pip install termcolor")
+
+required = {'termcolor'}
+installed = {pkg.key for pkg in pkg_resources.working_set}
+missing = required - installed
+
+if missing:
+    python = sys.executable
+    subprocess.check_call(
+        [python, '-m', 'pip', 'install', *missing], stdout=subprocess.DEVNULL)
+# ^ This entire code essentially checks for pygame and if the user does not have it installed, it will install it before moving forward.
+# ========================================================================================================================================
